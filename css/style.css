@@ -1,0 +1,181 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background: #3B3F45;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Полная ширина экрана */
+    height: 100vh; /* Полная высота экрана */
+    border: 5px solid #fff;
+    box-sizing: border-box; /* Включаем рамку в размеры элемента */
+    pointer-events: none; /* Чтобы рамка не мешала кликам */
+}
+
+.header {
+    background: #4A4F56
+}
+
+.container {
+    font-family: Roboto;
+    max-width: 793px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-title h1,
+.header-title p {
+    color: #FF8984;
+    text-align: center;
+    margin: 0;
+}
+
+.header-title h1 {
+    font-size: 24px;
+    padding-top: 19px;
+}
+
+.header-title p {
+    font-size: 16px;
+    padding-bottom: 12px;
+}
+
+
+/* points */
+
+.points {
+    padding-top: 20px;
+}
+
+.point {
+    display: flex;
+    background: #77788d;
+    padding: 11px 0 13px 0;
+    cursor: pointer;
+}
+
+/* checkbox */
+
+input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    margin-top: 0;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+}
+
+input[type="checkbox"]:before {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-color: #fff;
+}
+
+input[type="checkbox"]:checked:before {
+    background-image: url("../images/checkbox.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* END checkbox */
+
+
+.point input {
+    margin: 12px 16px 14px 12px;
+}
+
+.point:hover {
+    background: #625E77;
+    border-top: solid 3px #fff;
+    border-bottom: solid 3px #fff;
+    transition: all .1s ease-in;
+}
+
+.point:active {
+    background: #FF8984;
+    color: #9B96AC;
+}
+
+.point:checked {
+    background: #FF8984;
+    border-top: solid 3px #fff;
+    transition: all .1s ease-in;
+}
+
+.point label {
+    margin: 11px 13px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.point-description {
+    display: flex;
+    align-items: end;
+    padding: 8px 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.point-description span {
+    font-size: 12px;
+}
+
+input[type="checkbox"]:checked + .point-description {
+    color: white;
+    text-decoration: line-through;
+}
+
+span.point-description-subtext {
+    padding: 10px 0;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: end;
+}
+
+.point-description-subtext::before {
+    content: "(";
+}
+
+.point-description-subtext::after {
+    content: ")";
+}
+
+.indent {
+    padding: 0;
+}
+
+.point-color-even {
+    background: #848599;
+}
+
+/* end points */
+
+
+/* footer */
+
+.footer-title {
+    display: block;
+    background: #4A4F56;
+    padding: 12px 0 12px;
+    color: #FF8984;
+    text-align: center;
+    margin: 45px 0 0;
+    text-decoration: none;
+}
+
+/* end footer */
